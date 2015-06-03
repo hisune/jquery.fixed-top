@@ -9,4 +9,4 @@ $(document).ready(function(){
 });
 ```
 
-Code by Hisune(http://hisune.com)
+Code by Hisune(http://hisune.com), for more detail, go to http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
