@@ -1,4 +1,4 @@
-// 插件代码开始，可以单独提取到某个js文件中 -- http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
+// -- http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
 (function($){
     $.fn.extend({
         fixPosition : function(opt, callback)
