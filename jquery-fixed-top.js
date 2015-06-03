@@ -1,4 +1,4 @@
-// ²å¼þ´úÂë¿ªÊ¼£¬¿ÉÒÔµ¥¶ÀÌáÈ¡µ½Ä³¸öjsÎÄ¼þÖÐ -- http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
+// æ’ä»¶ä»£ç å¼€å§‹ï¼Œå¯ä»¥å•ç‹¬æå–åˆ°æŸä¸ªjsæ–‡ä»¶ä¸­ -- http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
 (function($){
     $.fn.extend({
         fixPosition : function(opt, callback)
@@ -17,17 +17,17 @@
             $(window).scroll(function(){
                 var w =  $(window).scrollTop();
                 if(w > o){
-                    addWidth(_this.children()); // ¹Ì¶¨ËùÓÐ×ÓÔªËØµÄ¿í¶È
-                    if(ie6){ // ¼æÈÝÍò¶ñie6
+                    addWidth(_this.children()); // å›ºå®šæ‰€æœ‰å­å…ƒç´ çš„å®½åº¦
+                    if(ie6){ // å…¼å®¹ä¸‡æ¶ie6
                         _this.css({'position':'absolute', 'top':eval(document.documentElement.scrollTop), 'z-index':opt.index, 'width':def_w, 'height':def_h});
-                        $("html,body").css({'background-image':'url(about:blank)', 'background-attachment':'fixed'}); // ·ÀÖ¹ie6Ò³Ãæ¶¶¶¯
+                        $("html,body").css({'background-image':'url(about:blank)', 'background-attachment':'fixed'}); // é˜²æ­¢ie6é¡µé¢æŠ–åŠ¨
                     }else{
                         _this.css({'position':'fixed', 'top':opt.top, 'z-index':opt.index, 'width':def_w, 'height':def_h});
                     }
                 }else{
                     _this.css({'position':def_p, 'top':def_t, 'z-index':def_i});
                 }
-                if($(window).scrollLeft() == 0){ // ¿ÓµùµÄºá×ø±ê¹ö¶¯¡£¡£¡£
+                if($(window).scrollLeft() == 0){ // å‘çˆ¹çš„æ¨ªåæ ‡æ»šåŠ¨ã€‚ã€‚ã€‚
                     _this.css({'left': 'auto'});
                 }else{
                     _this.css({'left': '-' + ($(window).scrollLeft() - 15) + 'px'});
@@ -36,7 +36,7 @@
  
             var addWidth = function(obj)
             {
-                obj.each(function(){ // ¹Ì¶¨ËùÓÐ×ÓÔªËØµÄ¿í¶È
+                obj.each(function(){ // å›ºå®šæ‰€æœ‰å­å…ƒç´ çš„å®½åº¦
                     $(this).css({width: $(this).outerWidth()});
                     if($(this).children().length > 0){
                         addWidth($(this).children());
