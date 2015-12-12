@@ -1,4 +1,4 @@
-// -- http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin
+// jquery-fixed-top plugin v1.1 (https://github.com/hisune/jquery-fixed-top, http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin)
 (function($){
     $.fn.extend({
         fixPosition : function(opt, callback)
@@ -14,10 +14,22 @@
             var def_w =  _this.width();
             var def_h =  _this.height();
             var ie6 = !-[1,] && !window.XMLHttpRequest;
+            var addWidth = function(obj)
+            {
+                obj.each(function(){ // 固定所有子元素的宽度
+                    var _obj_this = $(this);
+                    setTimeout(function(){
+                        _obj_this.css({width: _obj_this.outerWidth()});
+                        if(_obj_this.children().length > 0){
+                            addWidth(_obj_this.children());
+                        }
+                    }, 0);
+                });
+            };
+            addWidth(_this.children()); // 固定所有子元素的宽度
             $(window).scroll(function(){
                 var w =  $(window).scrollTop();
                 if(w > o){
-                    addWidth(_this.children()); // 固定所有子元素的宽度
                     if(ie6){ // 兼容万恶ie6
                         _this.css({'position':'absolute', 'top':eval(document.documentElement.scrollTop), 'z-index':opt.index, 'width':def_w, 'height':def_h});
                         $("html,body").css({'background-image':'url(about:blank)', 'background-attachment':'fixed'}); // 防止ie6页面抖动
@@ -33,16 +45,6 @@
                     _this.css({'left': '-' + ($(window).scrollLeft() - 15) + 'px'});
                 }
             });
- 
-            var addWidth = function(obj)
-            {
-                obj.each(function(){ // 固定所有子元素的宽度
-                    $(this).css({width: $(this).outerWidth()});
-                    if($(this).children().length > 0){
-                        addWidth($(this).children());
-                    }
-                });
-            };
         }
     });
 })(jQuery);
