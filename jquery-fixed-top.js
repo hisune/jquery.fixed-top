@@ -1,5 +1,5 @@
 /**
- * jquery-fixed-top plugin v1.1 (https://github.com/hisune/jquery-fixed-top, http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin)
+ * jquery-fixed-top plugin v1.2 (https://github.com/hisune/jquery-fixed-top, http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin)
  * author: hi@hisune.com
  */
 (function($){
