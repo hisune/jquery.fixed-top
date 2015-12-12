@@ -5,7 +5,7 @@ jquery-fixed-top - a lightweight jquery fixed top plugin
 
 ```js
 $(document).ready(function(){
-    $('#test').fixPosition({top:2,index:5});
+    $('#test').fixPosition({top: 2, index: 5});
 });
 ```
 
