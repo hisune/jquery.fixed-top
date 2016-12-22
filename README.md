@@ -1,6 +1,10 @@
 jquery.fixed-top - a lightweight jquery fixed top plugin
 =============
 
+### Demo
+
+https://demo.hisune.com/jquery.fixed-top/
+
 ### Usage:
 
 ```js
