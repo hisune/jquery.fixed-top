@@ -1,6 +1,8 @@
-/**
- * jquery-fixed-top plugin v1.2 (https://github.com/hisune/jquery-fixed-top, http://www.hisune.com/view/5/scroll-fixed-top-jquery-plugin)
- * author: hi@hisune.com
+ /*
+ * jquery.auto-email - 1.0.0
+ * An autocomplete JQuery plugin for email fields.
+ *  
+ * https://github.com/hisune/jquery.fixed-top
  */
 (function($){
     $.fn.extend({
