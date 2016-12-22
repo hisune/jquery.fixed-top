@@ -1,4 +1,4 @@
-jquery-fixed-top - a lightweight jquery fixed top plugin
+jquery.fixed-top - a lightweight jquery fixed top plugin
 =============
 
 ### Usage:
